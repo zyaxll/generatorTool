@@ -2,13 +2,6 @@ package generator.utils;
 
 import java.io.*;
 
-/**
- * @description: {TODO}
- * Copyright 2011-2015 B5M.COM. All rights reserved
- * @author: Leo.li
- * @version: 1.0
- * @createdate: ${Date}
- */
 public class FileUtils {
 
     public static StringBuilder readFile(String fileName) throws Exception {

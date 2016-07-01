@@ -5,13 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
-/**
- * @description: {TODO}
- * Copyright 2011-2015 B5M.COM. All rights reserved
- * @author: Leo.li
- * @version: 1.0
- * @createdate: ${Date}
- */
+
 public class Constant {
 
     public final static String FILE_SPACE = "    ";
@@ -27,6 +21,7 @@ public class Constant {
     public static String FILE_PATH;
     public static String TABLE_SCHEMA;
     public static String ENTITY_PATH;
+    public static String MODEL_PATH;
     public static String DAO_PATH;
     public static String SERVICE_PATH;
 
@@ -42,6 +37,7 @@ public class Constant {
             FILE_PATH = PropertyUtils.getValue("file_path", properties);
             TABLE_SCHEMA = PropertyUtils.getValue("table_schema", properties);
             ENTITY_PATH = PropertyUtils.getValue("entity_path", properties, false);
+            MODEL_PATH = PropertyUtils.getValue("model_path", properties, false);
             DAO_PATH = PropertyUtils.getValue("dao_path", properties, false);
             SERVICE_PATH = PropertyUtils.getValue("service_path", properties, false);
         } catch (IOException e) {

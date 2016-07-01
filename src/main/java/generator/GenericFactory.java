@@ -15,13 +15,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @description: {TODO}
- * Copyright 2011-2015 B5M.COM. All rights reserved
- * @author: Leo.li
- * @version: 1.0
- * @createdate: ${Date}
- */
+
 public class GenericFactory {
 
     private static List<GenericBase> lstGeneric = new ArrayList<GenericBase>();
@@ -42,6 +36,7 @@ public class GenericFactory {
         try {
             Table table = findTableByName(tableName, tableSchema);
 
+//            addGeneric(genericBean(GenericType.MODEL,table));
             addGeneric(genericBean(GenericType.ENTITY, table));
             addGeneric(genericBean(GenericType.DAO, table));
             addGeneric(genericBean(GenericType.SERVICE, table));
@@ -69,6 +64,9 @@ public class GenericFactory {
     public static GenericBase genericBean(GenericType type, Table table) {
         GenericBase base;
         switch (type) {
+            case MODEL:
+                base = new GenericModel(table);
+                break;
             case ENTITY:
                 base = new GenericEntity(table);
                 break;

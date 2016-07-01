@@ -7,12 +7,9 @@ import generator.core.ColumnAdapt;
 import generator.utils.Constant;
 
 /**
- * @description: {TODO}
- * Copyright 2011-2015 B5M.COM. All rights reserved
- * @author: Leo.li
- * @version: 1.0
- * @createdate: ${Date}
+ * Created by zya on 16/7/1.
  */
+
 public class GenericEntity extends ColumnAdapt {
 
     private static final String NAME = "Entity";
@@ -35,14 +32,14 @@ public class GenericEntity extends ColumnAdapt {
 
         String targetName = Constant.ENTITY_PATH;
         if (null == targetName || "".equals(targetName.trim())) {
-            targetName = "/src/main/java/com/b5m/" + getProjectName() + "/model/entity/";
+            targetName = "/src/main/java/com/" + getProjectName() + "/model/entity/";
         }
         setTargetName(targetName + getTable().getName() + ".java");
     }
 
     @Override
     public void setFilePath(String filePath) {
-        super.setFilePath(filePath + "/" + getProjectName() + "-api");
+        super.setFilePath(filePath + "/" + "cms_model");
     }
 
     @Override

@@ -27,7 +27,7 @@ public class GenericDao extends BizAdapt {
 
     @Override
     public void setFilePath(String filePath) {
-        super.setFilePath(filePath + "/" + getProjectName() + "-core");
+        super.setFilePath(filePath + "/" +  "cms_dao");
     }
 
     @Override
@@ -36,7 +36,7 @@ public class GenericDao extends BizAdapt {
 
         String targetName = Constant.DAO_PATH;
         if (null == targetName || "".equals(targetName.trim())) {
-            targetName = "/src/main/java/com/b5m/" + getProjectName() + "/dao/";
+            targetName = "/src/main/java/com/" + getProjectName() + "/dao/";
         }
         setTargetName(targetName + getTable().getName() + getName() + ".java");
     }

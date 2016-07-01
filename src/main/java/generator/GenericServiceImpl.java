@@ -27,7 +27,7 @@ public class GenericServiceImpl extends BizAdapt {
 
     @Override
     public void setFilePath(String filePath) {
-        super.setFilePath(filePath + "/" + getProjectName() + "-core");
+        super.setFilePath(filePath + "/" + "cms_service");
     }
 
     @Override
@@ -36,7 +36,7 @@ public class GenericServiceImpl extends BizAdapt {
 
         String targetName = Constant.SERVICE_PATH;
         if (null == targetName || "".equals(targetName.trim())) {
-            targetName = "/src/main/java/com/b5m/" + getProjectName() + "/service/";
+            targetName = "/src/main/java/com/" + getProjectName() + "/service/";
         }
         setTargetName(targetName + "/impl/" + getTable().getName() + "Service.java");
     }
